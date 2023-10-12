@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+$font-main: "Roboto", sans-serif;
+$font-secondary: "Sharon Sans", sans-serif;
+$font-third: "Circular Std", serif;
+
+$color-bg: #fff;
+$color-main: #45505e;
+$color-secondary: #8c9cad;
+$color-green: #00ab63;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-main;
+  font-size: 1rem;
+  font-weight: 500;
+  color: $color-main;
+  background-color: $color-bg;
+}
