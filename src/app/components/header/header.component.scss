@@ -4,7 +4,8 @@
   padding: 64px;
   display: flex;
   gap: 48px;
-  align-items: center;
+  align-items: left;
+  flex-direction: column;
 
   &__brand {
     &__logo {
@@ -14,7 +15,7 @@
     &__subtitle {
       display: flex;
       gap: 7px;
-      justify-content: space-between;
+      justify-content: left;
 
       &__line {
         background: $color-green;
@@ -50,3 +51,20 @@
     }
   }
 }
+
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+
+    &__brand {
+
+      &__subtitle {
+        &__line {
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
+
