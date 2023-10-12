@@ -1,0 +1,52 @@
+@import "/src/styles.scss";
+
+.header {
+  padding: 64px;
+  display: flex;
+  gap: 48px;
+  align-items: center;
+
+  &__brand {
+    &__logo {
+      padding: 10px 0;
+    }
+
+    &__subtitle {
+      display: flex;
+      gap: 7px;
+      justify-content: space-between;
+
+      &__line {
+        background: $color-green;
+        height: 4px;
+        width: 83px;
+        opacity: 0.32;
+      }
+
+      &__subtitle {
+        color: $color-green;
+        line-height: 0.9rem;
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &__date {
+      font-size: 18px;
+      color: $color-main;
+      display: flex;
+      gap: 20px;
+    }
+
+    &__text {
+      font-size: 14px;
+      font-weight: 400;
+      color: $color-secondary;
+    }
+  }
+}

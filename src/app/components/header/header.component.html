@@ -1,0 +1,23 @@
+<header class="header">
+  <div class="header__brand">
+    <img
+      class="header__brand__logo"
+      src="assets/svg/Logo.svg"
+      alt="Logo Stone"
+    />
+    <div class="header__brand__subtitle">
+      <div class="header__brand__subtitle__line"></div>
+      <span class="header__brand__subtitle__subtitle">Currency</span>
+    </div>
+  </div>
+  <div class="header__info">
+    <h2 class="header__info__date" style="font-size: 16px; line-height: 1">
+      <span>
+        {{ (date$ | async)?.getDate() }} de {{ getMonthName((date$ | async)?.getMonth() || 0) }} {{ (date$ | async)?.getFullYear() }}
+      </span> | <span>{{ formatTime(date$ | async) }} UTC</span>
+    </h2>
+    <p class="header__info__text">
+      Dados de câmbio disponibilizados pela Morningstar.
+    </p>
+  </div>
+</header>
