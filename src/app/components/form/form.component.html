@@ -1,0 +1,48 @@
+<div class="container">
+  <form class="container__form" [formGroup]="convertForm" (ngSubmit)="onSubmit()">
+    <div class="container__form__money">
+      <div class="container__form__money__field">
+        <label for="amount">Dólar</label>
+        <input
+          type="text"
+          id="amount"
+          formControlName="amount"
+          placeholder="$ 1,00"
+          (input)="formatAmount($event)"
+        />
+      </div>
+      <div class="container__form__money__field">
+        <label for="stateFee">Taxa do Estado</label>
+        <input
+          type="text"
+          id="stateFee"
+          formControlName="stateFee"
+          placeholder="0 %"
+          (input)="formatStateFee($event)"
+        />
+      </div>
+    </div>
+    <div class="container__form__type">
+      <legend>Tipo de compra</legend>
+      <div class="container__form__type__fields">
+        <div>
+          <input type="radio" id="cash" value="cash" formControlName="type" />
+          <label for="cash">Dinheiro</label>
+        </div>
+        <div>
+          <input type="radio" id="card" value="card" formControlName="type" />
+          <label for="card">Cartão</label>
+        </div>
+      </div>
+    </div>
+    <button
+      type="submit"
+      [disabled]="!convertForm.valid"
+      [ngClass]="{ 'btn-enabled': isFormValid, 'btn-disabled': !isFormValid }"
+      (submit)="onSubmit()"
+    >
+      <img src="assets/svg/Group 3023.svg" alt="Ícone conversão" />
+      <span>Converter</span>
+    </button>
+  </form>
+</div>
