@@ -1,0 +1,63 @@
+@import '/src/styles.scss';
+
+.container {
+  padding: 108px 0 0 64px;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  gap: 32px;
+
+  &__back {
+
+    button {
+      border: 1px solid #D7E0EB;
+      padding: 16px;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      color: $color-grey;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0px 8px 4px 0px rgba(13, 17, 27, 0.08);
+      background-color: transparent;
+    }
+  }
+
+  &__result {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    h3 {
+      font-size: 20px;
+      line-height: 32px;
+      font-weight: 600;
+    }
+
+    span {
+      font-size: 64px;
+      font-weight: 600;
+      line-height: 80px;
+      color: $color-green;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    h4 {
+      color: #6E7E90;
+      font-weight: 600;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}

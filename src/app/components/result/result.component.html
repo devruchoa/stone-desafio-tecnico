@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="container__back">
+    <button class="container__back__btn" (click)="onGoBack()">
+      <img
+        class="container__back__icon"
+        src="assets/svg/arrow-left.svg"
+        alt="Seta para a esquerda"
+      />Voltar
+    </button>
+  </div>
+  <div class="container__result">
+    <h3 class="container__result__title">O resultado do cálculo é</h3>
+    <span class="container__result__value">R$ {{ formatResult(conversionResult) }}</span>
+  </div>
+  <div class="container__info">
+    <h4>Compra no dinheiro e taxa de {{ formatResult(stateFee / 100) }}%</h4>
+    <h4>Cotação do dólar: $1,00 = R$ {{ dollarQuotation }}</h4>
+  </div>
+</div>
